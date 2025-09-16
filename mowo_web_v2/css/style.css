@@ -511,22 +511,22 @@ section{
 	width: 100%;
 	height: fit-content !important;
 	aspect-ratio: 0 !important;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 
-#cel-social-media{
+.cel-social-media{
 	width: 250px;
 	height: 450px;
 	border:solid 5px grey;
 	border-radius: 15px;
 	overflow: hidden;
-	padding: 0px;
+	padding: 0px;	
 	/*overflow: scroll;
 	scrollbar-width: none;*/
 }
 
-#camara-cel-social-media{
+.camara-cel-social-media{
 	position:relative;
 	top:5px;
 	margin:auto;
@@ -537,7 +537,7 @@ section{
 	z-index: 5;
 }
 
-#pantalla-cel-social-media{
+.pantalla-cel-social-media{
 	position:relative;
 	width: 100%;
 	height: 100%;
@@ -976,7 +976,8 @@ section{
 
 	.cont-desplegado{
 		flex-direction: column;
-		height: 5%;
+		/*height: 5%;*/
+		height: 0px;
 	}
 
 	.img-desplegable{
