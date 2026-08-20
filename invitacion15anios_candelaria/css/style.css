@@ -1,0 +1,217 @@
+:root {
+  --fondo-neutro: rgba(194, 195, 149, 0.9);
+  --fondo-destacar: rgba(129, 130, 99,0.9);
+  --color-principal: rgba(255, 185, 255,1);
+  --color-secundario:rgba(255, 200, 255,1);
+  --color-destacar: rgba(129, 130, 99,1);
+}
+
+@font-face {
+  font-family: 'cursiva';
+  src: url('../assets/fonts/Caitlin Angelica.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'imprenta-regular';
+  src: url('../assets/fonts/JuliusSansOne-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'imprenta-bold';
+  src: url('../assets/fonts/lato-bold.ttf');
+  font-style: bold;
+}
+
+html{
+
+	scrollbar-width: none;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	width:100vw;
+	height:100vh;
+	background-image: url('../assets/candevideo.gif');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+
+.contenedor{
+	display:flex;
+	scrollbar-width: none;
+}
+
+.seccion{
+	flex-direction:column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: calc(100% - 40px);
+	min-height: 99vh;
+	padding:40px 20px;
+	border:dotted 1px black;
+	overflow-y: scroll;
+}
+
+.boton{
+	display:inline-block;
+	border:solid 1px var(--color-principal);
+	background-color:var(--color-destacar);
+	color: var(--color-principal);
+	font-family: imprenta-regular;
+	border-radius: 20px 0px 20px 0px;
+	height: 40px;
+	width: 150px;
+	text-align: center;	
+	align-content: center;
+	margin:0;
+}
+
+#contenido{
+	width: 95%;
+	height: 95%;
+	margin:auto;
+	overflow-y:scroll;
+	scrollbar-width: none;
+	border:dotted 2px red;
+}
+
+.epigrafe{
+	margin:0px;
+	font-size:1.8rem;
+	font-family: imprenta-bold;
+	color:var(--color-secundario);
+}
+.titulo{
+	margin:0px;
+	font-size:8rem;
+	font-family: cursiva;
+	color:var(--color-principal);
+}
+
+.subtitulo{
+	margin:0px;
+	font-size:1.5rem;
+	font-family: imprenta-regular;
+	color:var(--color-secundario);
+}
+
+.texto-seccion{
+	font-size:2rem;
+	font-family: imprenta-regular;
+	color:var(--color-principal);
+	margin:5px;
+}
+
+.cont-icono-seccion{
+	/*border:dotted 2px red;*/
+	width: 120px;
+	height: 120px;
+}
+
+
+/**********************************************************/
+
+
+#cont-seccion-encabezado{
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;	
+	background-color:var(--fondo-neutro);
+	color:var(--color-principal);
+}
+
+#cont-seccion-encabezado .epigrafe, #cont-seccion-encabezado .texto-seccion{
+	font-size:2rem;
+	font-family: imprenta-bold;
+	color:var(--color-destacar) !important;
+}
+
+#cont-seccion-encabezado .titulo{
+	font-size:10.5em;
+	font-family: cursiva;
+	color:var(--color-principal);
+}
+
+#seccion-presentacion{	
+	background-color: var(--fondo-destacar);
+}
+
+#seccion-invitacion{
+	background-color: var(--fondo-neutro);	
+}
+
+#cont-detalle-invitacion{
+	align-self:start;
+}
+
+#seccion-dress-code{
+	background-color: var(--fondo-destacar);
+}
+
+#cont-detalle-dress-code{
+	flex-direction: column;
+	align-self:start;
+}
+
+#cont-galeria-dress-code, #cont-galeria{
+	border:dotted 1px blue;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+#cont-galeria-dress-code img, #cont-galeria img{
+	width: 100%;
+}
+
+.cont-img-galeria-vertical{
+	margin:10px;
+	border:dotted 1px black;
+	width:300px;
+	height: 400px;
+	overflow:hidden;
+}
+
+#seccion-asistencia{
+	background-color: var(--fondo-neutro);
+}
+
+#cont-tarjetas-asistencia{
+	flex-direction:row;
+	flex-wrap: wrap;
+}
+
+.tarjeta-asistencia{
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin:10px;
+	padding: 20px;
+	border:dotted 1px black;
+	width:300px;
+	height: 400px;
+	text-justify: center;
+}
+
+.texto-tarjeta-asistencia{
+	font-family: imprenta-bold;
+	color:var(--color-secundario);
+	font-size:2rem;
+	margin:0px;
+}
+
+#seccion-galeria{
+	background-color:var(--fondo-destacar);
+}
+
+#seccion-info-cuenta{
+	background-color: var(--fondo-neutro);
+}
+
+footer{
+	background-color:pink;
+}

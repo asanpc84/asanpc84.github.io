@@ -278,8 +278,11 @@ $(document).ready(function(){
 
     		$('nav').after('<span id="controlador-nav-mobile"><img src="assets/img/ico/ham_menu.png" style="height:80%; margin-left:auto;"/></span>')
 		}
+
     	$('#controlador-nav-mobile').on('click', despliega_nav_mobile)    	
     	$('nav a').on('click', despliega_nav_mobile)
+
+    	$('.cont-descripcion-desplegable').css('display','none')
     }
 
     $('#enlace-modal').on('click', muestra_modal)
@@ -477,7 +480,6 @@ function obtener_estilos(){
 
 function toggle_tarjeta_servicios(elem){
 
-	//$(elem).siblings('.cont-desplegado').css({'margin-top':'-50%'})
 	if($(elem).siblings('.cont-desplegado').css('margin-top') == '0px'){
 		
 		$(elem).find('span').css({'transform':'rotate(0deg)'})
@@ -489,6 +491,7 @@ function toggle_tarjeta_servicios(elem){
 
 			if(es_mobile){
 				alto_elem = '0px'
+			$(elem).siblings('.cont-desplegado').find('.cont-descripcion-desplegable').css({'display':'none'})
 			}else{
 				alto_elem = '5%'
 			}
@@ -505,6 +508,8 @@ function toggle_tarjeta_servicios(elem){
 		$(elem).siblings('.cont-desplegado').css({'margin-top':'0%', 'transition':'0.5s ease-in-out', 'visibility':'visible', 'height':'fit-content'})
 		
 		setTimeout(function(){
+
+			$(elem).siblings('.cont-desplegado').find('.cont-descripcion-desplegable').css({'display':'block'})
 			$(elem).siblings('.cont-desplegado').css({'opacity':'1','transition':'0.8s'})
 
 		},200)
