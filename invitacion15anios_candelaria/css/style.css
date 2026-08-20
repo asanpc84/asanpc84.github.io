@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: 'imprenta-bold';
-  src: url('../assets/fonts/lato-bold.ttf');
+  src: url('../assets/fonts/Lato-Bold.ttf');
   font-style: bold;
 }
 
@@ -36,7 +36,7 @@ body{
 	padding:0px;
 	width:100vw;
 	height:100vh;
-	background-image: url('../assets/candevideo.gif');
+	background-image: url('../assets/CANDEVIDEO.gif');
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
