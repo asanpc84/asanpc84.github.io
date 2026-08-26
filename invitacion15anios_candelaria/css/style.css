@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'cursiva';
   src: url('../assets/fonts/Caitlin Angelica.ttf');
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -46,6 +46,10 @@ body{
 	scrollbar-width: none;
 }
 
+path{
+	stroke: fuchsia;
+}
+
 .seccion{
 	flex-direction:column;
 	justify-content: space-evenly;
@@ -53,7 +57,7 @@ body{
 	width: calc(100% - 40px);
 	min-height: 99vh;
 	padding:40px 20px;
-	border:dotted 1px black;
+	/*border:dotted 1px black;*/
 	overflow-y: scroll;
 }
 
@@ -71,13 +75,13 @@ body{
 	margin:0;
 }
 
-#contenido{
+#contenido{	
 	width: 95%;
 	height: 95%;
 	margin:auto;
 	overflow-y:scroll;
 	scrollbar-width: none;
-	border:dotted 2px red;
+	/*border:dotted 2px red;*/
 }
 
 .epigrafe{
@@ -111,6 +115,7 @@ body{
 	/*border:dotted 2px red;*/
 	width: 120px;
 	height: 120px;
+	margin:40px 0px;
 }
 
 
@@ -118,6 +123,7 @@ body{
 
 
 #cont-seccion-encabezado{
+	margin-top:100vh;
 	flex-direction:column;
 	justify-content: center;
 	align-items: center;	
@@ -159,7 +165,7 @@ body{
 }
 
 #cont-galeria-dress-code, #cont-galeria{
-	border:dotted 1px blue;
+	/*border:dotted 1px blue;*/
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
@@ -171,7 +177,7 @@ body{
 
 .cont-img-galeria-vertical{
 	margin:10px;
-	border:dotted 1px black;
+	/*border:dotted 1px black;*/
 	width:300px;
 	height: 400px;
 	overflow:hidden;
@@ -194,7 +200,7 @@ body{
 	border:dotted 1px black;
 	width:300px;
 	height: 400px;
-	text-justify: center;
+	text-align: center;
 }
 
 .texto-tarjeta-asistencia{
@@ -212,6 +218,45 @@ body{
 	background-color: var(--fondo-neutro);
 }
 
+#seccion-info-cuenta .epigrafe{
+
+	margin-top:30px;
+}
+
 footer{
 	background-color:pink;
+}
+
+
+
+
+@media(max-width: 1023px){
+
+	.subtitulo{
+		font-size:1.3rem;
+		margin:auto;
+	}
+
+	.texto-seccion{
+		font-size:1.6rem;
+	}
+
+	.seccion{
+		text-align: center;
+	}
+
+	.tarjeta-asistencia{
+		align-items:center;
+	}
+
+
+
+	#cont-detalle-invitacion{
+		align-self:center;
+	}
+
+	#cont-detalle-dress-code{
+		align-self:center;
+	}
+
 }
