@@ -1,6 +1,11 @@
 :root {
-  --fondo-neutro: rgba(194, 195, 149, 0.9);
-  --fondo-destacar: rgba(129, 130, 99,0.9);
+  /*--fondo-neutro: rgba(194, 195, 149, 0.9);*/
+  /*--fondo-destacar: rgba(129, 130, 99,0.9);*/
+  
+	--fondo-neutro: rgba(238, 208, 206, 1);
+  --fondo-destacar: rgba(192, 128, 128,0.9);
+  
+
   --fondo-principal: rgba(166, 38, 98,0.9);
   --fondo-secundario:rgba(122, 38, 98,0.9);
 	/*  --color-principal: rgba(255, 185, 255,1);*/
@@ -76,12 +81,14 @@ path{
 	padding:40px 20px;
 	/*border:dotted 1px black;*/
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .boton{
 	display:inline-block;
 	border:solid 2px var(--color-principal);
-	background-color:var(--color-neutro);
+	/*background-color:var(--color-neutro);*/
+	background-color: rgba(217,185,160,1);
 	color: var(--color-principal);
 	font-family: imprenta-regular;
 	border-radius: 20px 0px 20px 0px;
@@ -104,8 +111,8 @@ path{
 .epigrafe{
 	margin:0px;
 	font-size:1.8rem;
-	font-family: imprenta-bold;
-	color:var(--color-secundario);
+	font-family: imprenta-regular;
+	/*color:var(--color-secundario);*/
 }
 .titulo{
 	margin:0px;
@@ -116,15 +123,15 @@ path{
 
 .subtitulo{
 	margin:0px;
-	font-size:1.5rem;
+	font-size:1.8rem;
 	font-family: imprenta-regular;
-	color:var(--color-secundario);
+	color:var(--color-principal);
 }
 
 .texto-seccion{
 	font-size:2rem;
 	font-family: imprenta-regular;
-	color:var(--color-principal);
+	/*color:rgb(92,81,80);*/
 	margin:5px;
 	text-align: center;
 }
@@ -139,6 +146,17 @@ path{
 
 /**********************************************************/
 
+.theme-oscuro{
+	background-color: var(--fondo-destacar);
+	color:rgb(254,236,234);
+}
+
+.theme-claro{
+	background-color: var(--fondo-neutro);	
+	color:rgb(92,81,80);
+
+}
+
 
 #cont-seccion-encabezado{
 	margin-top:100vh;
@@ -151,24 +169,24 @@ path{
 
 #cont-seccion-encabezado .epigrafe, #cont-seccion-encabezado .texto-seccion{
 	font-size:2rem;
-	font-family: imprenta-bold;
-	color:var(--color-destacar) !important;
+	font-family: imprenta-regular;
+	/*color:var(--color-destacar) !important;*/
 }
 
 #cont-seccion-encabezado .titulo{
-	font-size:10.5em;
+	font-size:10em;
 	font-family: cursiva;
 	color:var(--color-principal);
 	text-shadow: 0px 0px 3px white;
 }
 
-#seccion-presentacion{	
+/*#seccion-presentacion{	
 	background-color: var(--fondo-destacar);
 }
 
 #seccion-invitacion{
 	background-color: var(--fondo-neutro);	
-}
+}*/
 
 #cont-detalle-invitacion{
 	align-self:start;
@@ -177,7 +195,7 @@ path{
 #cont-countdown{
 	margin-top:10px;
 	min-width: 50%;
-	max-width: 90%;
+	width: 90%;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
@@ -187,7 +205,7 @@ path{
 
 .cont-elem-countdown{
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	text-align: center;
 }
 
@@ -204,9 +222,11 @@ path{
 	color:var(--color-destacar);
 }
 
+/*
 #seccion-dress-code{
 	background-color: var(--fondo-destacar);
 }
+*/
 
 #cont-detalle-dress-code{
 	flex-direction: column;
@@ -245,12 +265,16 @@ path{
 	height: 400px;
 	overflow:hidden;
 	border-radius: 20px 0px 20px 0px;
-	border:solid 5px var(--color-principal);
+	border:solid 3px rgb(254,236,234);
+	border:solid 3px rgb(217, 185, 160);
+
 }
 
+/*
 #seccion-asistencia{
 	background-color: var(--fondo-neutro);
 }
+*/
 
 #cont-tarjetas-asistencia{
 	flex-direction:row;
@@ -264,7 +288,8 @@ path{
 	border-radius: 0px 20px 0px 20px;
 	margin:10px;
 	padding: 20px;
-	border:solid 2px var(--color-secundario);
+	/*border:solid 2px rgb(254,236,234);*/
+	border:solid 2px rgb(217, 185, 160);
 	width:300px;
 	height: 400px;
 	text-align: center;
@@ -272,22 +297,26 @@ path{
 
 .texto-tarjeta-asistencia{
 	font-family: imprenta-regular;
-	color:var(--color-secundario);
+	/*color:var(--color-secundario);*/
+	color:rgb(92,81,80);
 	font-size:2rem;
 	margin:0px;
 }
 
+/*
 #seccion-galeria{
 	background-color:var(--fondo-destacar);
 }
 
 #seccion-info-cuenta{
 	background-color: var(--fondo-neutro);
-}
+}*/
 
-#seccion-info-cuenta .epigrafe{
-
-	margin-top:30px;
+.cont-info-regalos{
+	flex-direction: column;
+	flex-wrap: nowrap;
+	text-align: center;
+	margin:20px;
 }
 
 footer{
