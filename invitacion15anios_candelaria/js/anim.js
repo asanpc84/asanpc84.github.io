@@ -178,5 +178,6 @@ $('#boton-reproductor').on('click', (e) =>{
 		$(boton).attr('_estado', 'pausa')
 		$('#ico-boton-reproductor').attr('src','assets/ico/play.png')	
 
+
 	}
 })
