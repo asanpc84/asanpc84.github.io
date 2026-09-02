@@ -147,7 +147,6 @@ $('#cont-seccion-encabezado').on('click', (e)=>{
 		}, 10)
 
 		setTimeout( () =>{	
-		console.log(1)		
 
 			$cont.css({'transition':tiempo_ini_anim *4 + 's ease-in-out', 
 				'transform': 'translateY(-100%'})
@@ -156,4 +155,28 @@ $('#cont-seccion-encabezado').on('click', (e)=>{
 
 	}
 
+})
+
+
+$('#boton-reproductor').on('click', (e) =>{
+
+	const boton = e.currentTarget
+	const $audio = $('audio')[0]
+
+	let estado_reproductor = $(boton).attr('_estado')
+	
+
+	if(estado_reproductor === 'pausa'){
+		$(boton).css({'transform': 'rotate(360deg)'})
+		$audio.play()
+		$(boton).attr('_estado', 'play')
+		$('#ico-boton-reproductor').attr('src','assets/ico/pause.png')		
+	}else{
+		$(boton).css({'transform': 'rotate(0deg)'})
+		$audio.pause()
+		$audio.currentTime = 0
+		$(boton).attr('_estado', 'pausa')
+		$('#ico-boton-reproductor').attr('src','assets/ico/play.png')	
+
+	}
 })
