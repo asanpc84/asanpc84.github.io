@@ -52,9 +52,21 @@ $('.img-galeria').on('mouseup', (e)=>{
 	let $img_elem = $($elem).attr('src')
 	let $img_elem_alt = $($elem).attr('alt')	
 	
-	$($elem).on("contextmenu", function(e) {
+	$($elem).on('contextmenu', function(e) {
     	e.preventDefault()
-    	 return false;
+     	return false;
+     
+	})
+
+	let controla_presion
+
+	$($elem).on('touchstart', function(e){
+		clearTimeout(controla_presion)
+
+	}, {pasive:true})
+
+	$($elem).on('touchend', function(e){
+		clearTimeout(controla_presion)
 
 	})
 
