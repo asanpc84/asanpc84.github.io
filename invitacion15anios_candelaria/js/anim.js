@@ -101,3 +101,59 @@ $('.img-galeria').on('mouseup', (e)=>{
 	$('body').append($modal)
 
 })
+
+
+$('#cont-seccion-encabezado').on('click', (e)=>{
+
+	const elem = e.currentTarget
+
+	const estrellas =['./assets/ico/estrella1.png', './assets/ico/estrella2.png']
+
+
+
+	for(let i=0;i<10;i++){
+
+		const indice_img = Math.floor(Math.random() * 2)
+		const posicion_img_v = Math.floor(Math.random() * 50)
+		const posicion_img_h = Math.floor(Math.random() * 100)
+		const rotacion_img = Math.floor(Math.random() * 300)
+
+		const tiempo_ini_anim = 0.5
+
+		const $cont = $('<div>')
+
+		$cont.css({'width':'20px', 
+			'height':'20px', 
+			'position': 'absolute', 
+			'bottom': '-20px', 
+			'left': posicion_img_h + 'vw',
+			'transition': tiempo_ini_anim + 's ease-out'
+		})
+		
+		const $img = $('<img>')
+		
+		$img.attr('src', estrellas[indice_img])
+		$img.css({'width': '100%', 
+			'height':'100%'})
+
+		$cont.append($img)
+
+		$(elem).append($cont)
+
+		setTimeout( () =>{
+
+			$cont.css({'transform': 'translateY(-' + posicion_img_v + 'vh) rotate(' + rotacion_img + 'deg)'})
+
+		}, 10)
+
+		setTimeout( () =>{	
+		console.log(1)		
+
+			$cont.css({'transition':tiempo_ini_anim *4 + 's ease-in-out', 
+				'transform': 'translateY(-100%'})
+
+		}, tiempo_ini_anim*1200)
+
+	}
+
+})

@@ -68,9 +68,6 @@ a{
 	text-align: center;
 }
 
-path{
-	stroke: fuchsia;
-}
 
 .seccion{
 	flex-direction:column;
@@ -141,6 +138,13 @@ path{
 	width: 120px;
 	height: 120px;
 	margin:40px 0px;
+	justify-content: center;
+	align-content: center;
+}
+
+.ico-seccion{
+	width: 100%;
+
 }
 
 
@@ -159,12 +163,14 @@ path{
 
 
 #cont-seccion-encabezado{
+	position:relative;
 	margin-top:100vh;
 	flex-direction:column;
 	justify-content: center;
 	align-items: center;	
 	background-color:var(--fondo-neutro);
 	color:var(--color-principal);
+	overflow-y: hidden;
 }
 
 #cont-seccion-encabezado .epigrafe, #cont-seccion-encabezado .texto-seccion{
